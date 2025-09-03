@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: mojibet-bot
+    env: docker
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_PRIVATE_KEY
+        sync: false
+      - key: HOUSE_WALLET
+        sync: false
+      - key: HOUSE_PRIVATE_KEY
+        sync: false
+      - key: SOLANA_RPC
+        value: https://api.devnet.solana.com
+      - key: DATABASE_URL
+        sync: false
